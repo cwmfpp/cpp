@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Const.h"
+#include "common.h"
 
 using namespace std;
 
@@ -11,10 +12,25 @@ char buf[j + 10] = {0};
 const int array[] = {1, 2, 3, 4};
 //float f[array[3]]; //illegal
 
+void f(int &value)
+{
+
+}
+
+void g(const int &value)
+{
+
+}
+
 int main(void)
 {
 	Const temp;
 
+	temp.printValue();
+	cout << "==============="<< __func__ << ":" << __LINE__ << "============" << endl;
+//	f(1); //error
+	g(2);
+	cout << "==============="<< __func__ << ":" << __LINE__ << "============" << endl;
 	cout << "i=" << i <<endl;	
 	cout << "j=" << j <<endl;	
 	cout << "address=" << address <<endl;	
