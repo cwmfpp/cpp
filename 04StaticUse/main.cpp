@@ -19,10 +19,17 @@ void test_two(void)
 	
 }
 
+void test_three(void)
+{
+	StaticUse temp;
+	StaticUse::callClassMember(&temp);
+}
+
 int main(void)
 {
 	//test_one();
-	test_two();
+	//test_two();
+	test_three();
 
 	return 0;
 }
