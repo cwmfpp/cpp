@@ -3,10 +3,17 @@
 
 using namespace std;
 
-int main(void)
+void test_one(void)
 {
 	StaticUse temp;
+	cout << __FILE__ << ":" << __func__ << ":" << __LINE__ << ":sizeof(StaticUse)=" << sizeof(StaticUse) <<endl;
+}
 
+
+int main(void)
+{
+	test_one();
+	
 	return 0;
 }
 
