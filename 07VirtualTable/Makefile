@@ -25,6 +25,6 @@ $(TARGET):$(OBJC)
 dump:
 	$(OBJDUMP) -Dxz $(TARGET) > $(dump_file) 
 clean:
-	rm -rf $(OBJC:.cpp=.o) $(TARGET) $(TARGET:=.dump) *.swp $(dump_file)
+	rm -rf $(OBJC:.cpp=.o) $(TARGET) $(TARGET:=.dump) .*.swp $(dump_file)
 
 .PHONY: Second.clean

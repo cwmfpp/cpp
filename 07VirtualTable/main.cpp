@@ -97,11 +97,16 @@ void testFourst(void)
 	int * vTable_ptr = NULL;
 	vTable_ptr = (int *)*((int *)&fourst);
 
-	for(int i = 0; i < 5; i++)
+	for(int i = 0; i < 7; i++)
 	{
 		func_ptr = (pFunc *)(vTable_ptr + i);
+		if(NULL == func_ptr)
+		{
+			printf("null null\n");
+		}
 		(*func_ptr)();
 	}
+	printf("====================\n");
 
 	vTable_ptr = (int *)*((int *)&fourst + 1);
 	for(int i = 0; i < 3; i++)
